@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CJ Eyes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" @mouseMove="mouseMove" @resize="updateCenter">
+    <div class="cj">
+      <img class="eyes-bg" src="images/cj-eyes-bg.png">
+      <div ref="leftPupil" class="center-left-pupil"></div>
+      <div ref="rightPupil" class="center-right-pupil"></div>
+      <img class="left-pupil" :style="{ transform: leftTransform }" src="images/pupil.png">
+      <img class="right-pupil" :style="{ transform: rightTransform }" src="images/pupil.png">
+      <img class="head" src="images/cj-head.png">
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

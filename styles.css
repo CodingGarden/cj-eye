@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cj {
+  position: relative;
+  height: 80%;
+  width: auto;
+}
+
+.head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  filter: hue-rotate(320deg) saturate(1000%)
+}
+
+.eyes-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.left-pupil {
+  position: absolute;
+  height: 3vh;
+  top: 50%;
+}
+
+.right-pupil {
+  position: absolute;
+  height: 3vh;
+  top: 50%;
+}
+
+.center-left-pupil {
+  position: absolute;
+  width: 3vh;
+  height: 3vh;
+  top: 50%;
+  transform: translate(-400%, -50%) translateX(0) translateY(0);
+}
+
+.center-right-pupil {
+  position: absolute;
+  width: 3vh;
+  height: 3vh;
+  top: 50%;
+  transform: translate(200%, -50%) translateX(0) translateY(0);
+}
