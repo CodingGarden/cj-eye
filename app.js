@@ -7,7 +7,7 @@ const getLookAngle = (mouse, pupil) => {
 const getLookDistance = (mouse, pupil) => {
   // multiplied by some scale factor, and clamped in 0-1
   return Math.clamp(Math.sqrt((mouse.clientY - pupil.y) ** 2 + (mouse.clientX - pupil.x) ** 2) * 1, 0, 1);
-}
+};
 
 const app = new Vue({
   el: '#app',
@@ -49,16 +49,15 @@ const app = new Vue({
   },
   methods: {
     updateCenter() {
-      console.log('updating center...');
       const leftPupilRect = this.$refs.leftPupil.getBoundingClientRect();
       const rightPupilRect = this.$refs.rightPupil.getBoundingClientRect();
-      this.left.center.x = leftPupilRect.x + leftPupilRect.width  / 2;
-      this.left.center.y = leftPupilRect.y + leftPupilRect.height  / 2;
-      
-      this.right.center.x = rightPupilRect.x + rightPupilRect.width  / 2;
-      this.right.center.y = rightPupilRect.y + rightPupilRect.height  / 2;
+      this.left.center.x = leftPupilRect.x + leftPupilRect.width / 2;
+      this.left.center.y = leftPupilRect.y + leftPupilRect.height / 2;
+
+      this.right.center.x = rightPupilRect.x + rightPupilRect.width / 2;
+      this.right.center.y = rightPupilRect.y + rightPupilRect.height / 2;
     },
-    mouseMove(event) {  
+    mouseMove(event) {
       const leftLookAngle = getLookAngle(event, this.left.center);
       const leftLookDistance = getLookDistance(event, this.left.center);
 
@@ -70,6 +69,6 @@ const app = new Vue({
 
       this.right.x = rightLookDistance * Math.cos(rightLookAngle) * 100;
       this.right.y = rightLookDistance * Math.sin(rightLookAngle) * 100;
-    }
+    },
   },
 });
