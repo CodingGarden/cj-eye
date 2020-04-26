@@ -27,7 +27,6 @@ body {
   left: 0;
   height: 100%;
   transform: translateX(-50%);
-  filter: hue-rotate(320deg) saturate(1000%)
 }
 
 .eyes-bg {
